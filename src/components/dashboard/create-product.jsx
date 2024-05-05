@@ -72,6 +72,7 @@ export default function ProductFormModal({
     if (!isOpen) {
       form.reset();
       setEditProduct(null);
+      setImageUrlState("");
     }
 
     if (product && isOpen) {
