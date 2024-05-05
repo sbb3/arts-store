@@ -33,21 +33,20 @@ export const GET_ALL_PRODUCTS = gql`
       price
       image
       description
+      reviews
     }
   }
 `;
 
 export const GET_PAGINATED_PRODUCTS_QUERY = gql`
   query GetProducts($limit: Int!, $offset: Int!) {
-    products(
-      limit: $limit
-      offset: $offset
-    ) {
+    products(limit: $limit, offset: $offset) {
       id
       name
       price
       image
       description
+      reviews
     }
     products_aggregate {
       aggregate {

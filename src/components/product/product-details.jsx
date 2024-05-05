@@ -14,8 +14,6 @@ export default function ShowProductModalDetails({
   setIsOpen,
   product,
 }) {
-  const reviews = 3;
-
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(false)}>
       <DialogContent className="w-full max-w-[1200px] flex flex-col md:flex-row">
@@ -42,7 +40,9 @@ export default function ShowProductModalDetails({
                   size={20}
                   className={`${
                     // index < product.reviews ? "text-yellow-500" : "text-gray-300"
-                    index < reviews ? "text-yellow-500" : "text-gray-300"
+                    index < parseInt(product?.reviews || 0)
+                      ? "text-yellow-500"
+                      : "text-gray-300"
                   }`}
                 />
               ))}

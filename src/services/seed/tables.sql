@@ -13,5 +13,6 @@ CREATE TABLE IF NOT EXISTS products
     name VARCHAR(255),
     price DECIMAL(10, 2),
     image TEXT,
-    description TEXT
+    description TEXT,
+    reviews DECIMAL(10, 2) DEFAULT 0
 );
