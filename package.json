@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:admin": "node ./src/services/seed/admin.js",
+    "seed:products": "node ./src/services/seed/products.js"
   },
   "dependencies": {
     "@apollo/client": "^3.10.1",

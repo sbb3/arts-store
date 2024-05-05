@@ -27,10 +27,21 @@ Ecommerce website to showcase arts boards and paintings
 ## Usage
 
 ```
+
+0. Run `npm i`
+
 1. `Rename `.env.local.example` to `.env.local` and `.env.example` to `.env`
 
+2.1 If you decided to use the provided Hasura Cloud API, provided on notion, you must init the db,  follow the steps below:
 
-Run `npm i`, then `npm run build` and last `npm run start`
+2.1.1 Copy the SQL script content from `/src/services/seed/tables.sql` and run it on the Hasura Console.
+
+2.1.2 then from the root directory, run `npm run seed:products` to seed the `products` table and run `npm run seed:admin` to seed `admin` in the `users` table.
+
+2.2 If you decided to use my own Hasura Cloud API defined in the `.env`, you can skip the above steps since the db is already seeded.
+
+
+3. lastly, run `npm run build` and last `npm run start`
 
 ```
 
@@ -61,3 +72,5 @@ Run `npm i`, then `npm run build` and last `npm run start`
 ## ER Diagram
 
 ![DB ER](https://utfs.io/f/f104af1b-fddd-456f-81ad-64a0debf0955-o1igxt.png)
+
+## THE END
