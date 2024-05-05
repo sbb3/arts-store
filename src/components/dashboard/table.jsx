@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Trash, Pencil, Eye } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
+import { Star } from "lucide-react";
 
 export default function TableWrapper({
   products,
@@ -42,6 +43,9 @@ export default function TableWrapper({
           </TableCell>
           <TableCell>
             <Skeleton className="w-12 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-24 h-4" />
           </TableCell>
           <TableCell>
             <Skeleton className="w-24 h-4" />
@@ -93,7 +97,20 @@ export default function TableWrapper({
             }}
           />
         </TableCell>
-        <TableCell className="flex flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-end gap-2">
+        {/* <TableCell className="flex items-center gap-1">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <Star
+              key={index}
+              size={20}
+              className={`${
+                index < parseInt(product?.reviews || 0)
+                  ? "text-yellow-500"
+                  : "text-gray-300"
+              }`}
+            />
+          ))}
+        </TableCell> */}
+        <TableCell>
           <Button
             className="mr-2"
             size="icon"
@@ -132,7 +149,8 @@ export default function TableWrapper({
           <TableHead>Description</TableHead>
           <TableHead>Price</TableHead>
           <TableHead>Image</TableHead>
-          <TableHead className="text-right"></TableHead>
+          {/* <TableHead>Rating</TableHead> */}
+          <TableHead>Actions</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>{content}</TableBody>
