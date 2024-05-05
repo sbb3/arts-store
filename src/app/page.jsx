@@ -1,6 +1,6 @@
 import HeroSection from "@/components/layout/hero-section";
-import ProductsGrid from "@/components/product/products-grid";
 import TitleSection from "@/components/layout/title-section";
+import ProductsGrid from "@/components/product/products-grid";
 
 export default function Index() {
   return (

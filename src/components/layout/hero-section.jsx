@@ -1,4 +1,7 @@
+"use client";
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import VideoWithLoading from "../ui/video-loading";
 
 export default function HeroSection() {
   return (
@@ -8,20 +11,17 @@ export default function HeroSection() {
         box-shadow-lg md:box-shadow-xl lg:box-shadow-2xl  
         "
     >
-      <div className="animate-in flex items-center justify-center absolute z-20 bg-red/20 p-5 w-full h-full">
-        <h1 className="text-xl md:text-4xl lg:text-6xl font-black drop-shadow-2xl text-center w-full ">
+      <div className="animate-in flex items-center justify-center absolute z-20 bg-black/20 p-5 w-full h-full">
+        <h1 className="text-xl md:text-4xl lg:text-6xl font-black drop-shadow-2xl text-center w-full animate-fadeIn">
           Find the Perfect Painting{" "}
         </h1>
       </div>
 
       <div className="h-full absolute z-10 w-full">
-        <video className="h-full object-cover w-full" autoPlay loop muted>
-          <source
-            src="https://utfs.io/f/b98faa6f-f601-40a2-affd-41d46a7374cf-fbazt0.mp4"
-            type="video/mp4"
-            className="scale-105 tranlate-y-5"
-          />
-        </video>
+        <VideoWithLoading
+          src="https://res.cloudinary.com/dgcfd6vjx/video/upload/f_auto:video,q_auto/xzouxk8uayzycnxnrwtv"
+          className="h-full object-cover w-full"
+        />
       </div>
     </AspectRatio>
   );

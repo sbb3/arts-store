@@ -1,10 +1,10 @@
+import { Toaster } from "@/components/ui/toaster";
+import DefaultLayout from "@/layouts/default-layout";
+import { ApolloWrapper } from "@/lib/apollo/apollo-wrapper";
+import { auth } from "auth";
+import { SessionProvider } from "next-auth/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import { ApolloWrapper } from "@/lib/apollo/apollo-wrapper";
-import DefaultLayout from "@/layouts/default-layout";
-import { SessionProvider } from "next-auth/react";
-import { auth } from "auth";
 
 const inter = Inter({ subsets: ["latin"] });
 

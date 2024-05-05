@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Trash, Pencil, Eye } from "lucide-react";
+import { Skeleton } from "../ui/skeleton";
 
 export default function TableWrapper({
   products,
@@ -17,13 +18,51 @@ export default function TableWrapper({
   setDeleteProduct,
   setImageModalOpen,
   setImageForView,
+  isLoading,
+  isError,
+  rowsPerPage,
 }) {
   let content = null;
-  if (products.length === 0) {
+  if (isLoading) {
+    content =
+      rowsPerPage > 0 &&
+      Array.from({ length: rowsPerPage }).map((_, index) => (
+        <TableRow key={index}>
+          <TableCell>
+            <Skeleton className="w-12 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-24 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-24 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-12 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-12 h-4" />
+          </TableCell>
+          <TableCell>
+            <Skeleton className="w-24 h-4" />
+          </TableCell>
+        </TableRow>
+      ));
+  } else if (isError) {
     content = (
       <TableRow>
-        <TableCell colSpan="6" className="text-center">
-          No products found
+        <TableCell colSpan="6">
+          <div className="text-center text-red-500">
+            There was an error fetching the products.
+          </div>
+        </TableCell>
+      </TableRow>
+    );
+  } else if (products.length === 0) {
+    content = (
+      <TableRow>
+        <TableCell colSpan="6">
+          <div className="text-center text-gray-500">No products found.</div>
         </TableCell>
       </TableRow>
     );
@@ -54,7 +93,7 @@ export default function TableWrapper({
             }}
           />
         </TableCell>
-        <TableCell className="text-right">
+        <TableCell className="flex flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-end gap-2">
           <Button
             className="mr-2"
             size="icon"
@@ -83,6 +122,7 @@ export default function TableWrapper({
       </TableRow>
     ));
   }
+
   return (
     <Table>
       <TableHeader>

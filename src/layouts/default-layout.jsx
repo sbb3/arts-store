@@ -4,7 +4,7 @@ import Footer from "@/components/layout/footer";
 export default function DefaultLayout({ children }) {
   return (
     <div
-      className="bg-background-content text-foreground font-sans antialiased min-h-screen"
+      className="font-sans antialiased min-h-screen"
       suppressHydrationWarning={true}
     >
       <Header />

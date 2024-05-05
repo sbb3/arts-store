@@ -38,11 +38,10 @@ export const GET_ALL_PRODUCTS = gql`
 `;
 
 export const GET_PAGINATED_PRODUCTS_QUERY = gql`
-  query GetProducts($limit: Int!, $offset: Int!, $searchTerm: String) {
+  query GetProducts($limit: Int!, $offset: Int!) {
     products(
       limit: $limit
       offset: $offset
-      where: { name: { _ilike: $searchTerm } }
     ) {
       id
       name

@@ -6,26 +6,27 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import Image from "next/image";
 import AddToCart from "../cart/add-to-cart";
-
+import ImageWithLoading from "../ui/image-loading";
+import { Star } from "lucide-react";
 export default function ShowProductModalDetails({
   isOpen,
   setIsOpen,
   product,
 }) {
+  const reviews = 3;
+
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(false)}>
       <DialogContent className="w-full max-w-[1200px] flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 lg:w-[80%] h-[300px] md:h-[500px] relative">
-          <Image
+          <ImageWithLoading
+            src={product.image}
             alt={product.name}
             className="rounded-t-lg object-cover w-full h-full"
-            src={product.image}
-            quality={100}
             width={500}
             height={500}
-            loader={({ src }) => src}
+            quality={20}
           />
         </div>
         <div className="w-full md:w-1/2 lg:w-1/2 p-4 flex flex-col justify-between gap-4 ">
@@ -34,6 +35,18 @@ export default function ShowProductModalDetails({
               <DialogTitle>{product.name}</DialogTitle>
             </DialogHeader>
             <p className="text-lg font-bold ">${product.price}</p>
+            <div className="flex gap-1">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Star
+                  key={index}
+                  size={20}
+                  className={`${
+                    // index < product.reviews ? "text-yellow-500" : "text-gray-300"
+                    index < reviews ? "text-yellow-500" : "text-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
             <DialogDescription className="text-sm  ">
               {product.description}
             </DialogDescription>

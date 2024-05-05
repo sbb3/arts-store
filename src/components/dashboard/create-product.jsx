@@ -8,6 +8,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -33,6 +34,8 @@ export default function ProductFormModal({
   product,
   setEditProduct,
 }) {
+  const [imageUrlState, setImageUrlState] = useState("");
+
   const [isUplloading, setIsUploading] = useState(false);
   const { toast } = useToast();
   const [files, setFiles] = useState([]);
@@ -61,20 +64,23 @@ export default function ProductFormModal({
       name: product ? product.name : "",
       description: product ? product.description : "",
       price: product ? product.price : 10,
-      imageUrl: product ? product.imageUrl : "",
+      imageUrl: product ? product.image : "",
     },
   });
 
   useEffect(() => {
     if (!isOpen) {
       form.reset();
+      setEditProduct(null);
     }
 
-    if (product) {
+    if (product && isOpen) {
+      console.log("product", product);
       form.setValue("name", product.name);
       form.setValue("description", product.description);
       form.setValue("price", product.price);
-      form.setValue("imageUrl", product.imageUrl);
+      form.setValue("imageUrl", product.image);
+      setImageUrlState(product.image);
     }
   }, [isOpen]);
 
@@ -160,6 +166,7 @@ export default function ProductFormModal({
                 name="name"
                 render={({ field }) => (
                   <FormItem className="w-full">
+                    <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input placeholder="name" {...field} />
                     </FormControl>
@@ -172,6 +179,7 @@ export default function ProductFormModal({
                 name="description"
                 render={({ field }) => (
                   <FormItem className="w-full">
+                    <FormLabel>Description</FormLabel>
                     <FormControl>
                       <Textarea placeholder="Description" {...field} />
                     </FormControl>
@@ -185,6 +193,7 @@ export default function ProductFormModal({
                 name="price"
                 render={({ field }) => (
                   <FormItem className="w-full">
+                    <FormLabel>Price</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Price"
@@ -205,10 +214,14 @@ export default function ProductFormModal({
                 name="imageUrl"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormControl className="h-72">
+                    <FormLabel>Image</FormLabel>
+                    <FormControl className="h-72 border border-gray-300 rounded-lg">
                       <FileUploader
-                        onFieldChange={field.onChange}
-                        imageUrl={field.value}
+                        onFieldChange={(value) => {
+                          form.setValue("imageUrl", value);
+                          setImageUrlState(value);
+                        }}
+                        imageUrl={imageUrlState}
                         setFiles={setFiles}
                       />
                     </FormControl>
