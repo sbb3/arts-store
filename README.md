@@ -27,7 +27,8 @@ Ecommerce website to showcase arts boards and paintings
 ## Usage
 
 ```
-Rename `.env.local.example` to `.env.local` and `.env.example` to `.env`
+1. `Rename `.env.local.example` to `.env.local` and `.env.example` to `.env`
+
 
 Run `npm i`, then `npm run build` and last `npm run start`
 
