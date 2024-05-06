@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       <div className="h-full absolute z-10 w-full">
         <VideoWithLoading
-          src="https://res.cloudinary.com/dgcfd6vjx/video/upload/f_auto:video,q_auto/xzouxk8uayzycnxnrwtv"
+          src="https://res.cloudinary.com/dgcfd6vjx/video/upload/f_auto:video,q_auto/kzqmvwmgb49tiq6ud65z"
           className="h-full object-cover w-full"
         />
       </div>

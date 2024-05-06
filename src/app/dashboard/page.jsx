@@ -1,6 +1,6 @@
 "use client";
 
-import ProductFormModal from "@/components/dashboard/create-product";
+import ProductMutationForm from "@/components/dashboard/product-mutation-form";
 import ShowDeleteProductModal from "@/components/dashboard/delete-product";
 import Table from "@/components/dashboard/table";
 import { ProductsPagination } from "@/components/product/products-pagination";
@@ -160,7 +160,7 @@ export default function Dashboard() {
         setProducts={setProducts}
         setTotalProducts={setTotalProducts}
       />
-      <ProductFormModal
+      <ProductMutationForm
         isOpen={isProductFormModalOpen}
         onOpenChange={setProductFormModalOpen}
         setProducts={setProducts}

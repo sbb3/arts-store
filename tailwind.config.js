@@ -1,15 +1,13 @@
 const { fontFamily, screens } = require("tailwindcss/defaultTheme");
-import { withUt } from "uploadthing/tw";
 
 /** @type {import('tailwindcss').Config} */
-export default withUt({
+module.exports = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./uploadthing/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -72,4 +70,4 @@ export default withUt({
     },
   },
   plugins: [require("tailwindcss-animate")],
-});
+};

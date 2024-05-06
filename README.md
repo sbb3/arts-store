@@ -9,7 +9,7 @@ Ecommerce website to showcase arts boards and paintings
 - Login and Register through (Google or Credentials)
 - Search (debounced functionality)
 - Pagination
-- Image upload to `https://uploadthing.com`
+- Image upload to `https://uploadthing.com` (! i have changed it, since it does not work on the production build locally)
 - Responsive design
 
 ## Tech Stack

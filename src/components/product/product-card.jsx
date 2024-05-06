@@ -25,8 +25,8 @@ export default function ProductCard({
     "
       >
         <ImageWithLoading
-          src={product.image}
-          alt={product.name}
+          src={product?.image}
+          alt={product?.name}
           // className="w-full h-full object-cover rounded-lg cursor-pointer"
           className="rounded-t-lg object-cover w-full h-full aspect-[4/3] cursor-pointer"
           width={200}

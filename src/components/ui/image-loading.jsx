@@ -11,7 +11,6 @@ export default function ImageWithLoading({
   ...rest
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
-
   return (
     <div className={cn("relative overflow-hidden", className)}>
       <Image

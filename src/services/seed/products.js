@@ -25,64 +25,64 @@ const execute = async (query, variables = {}) => {
 const seed = async () => {
   const CREATE_PRODUCTS = `
   mutation CreateProducts {
-    product1: insert_products_one(object: {name: "The Singel Bridge at the Paleisstraat in Amsterdam",  price: 19.99, image: "https://lh3.googleusercontent.com/Bawo7r1nPZV6sJ4OHZJHdKV_4Ky59vquAR7KoUXcNZgx9fqTaOW-QaOM9qoyYhOTAopzjt9OIfW06RMwa-9eJW9KjQw=s0", description: "The Singel Bridge at the Paleisstraat in Amsterdam, George Hendrik Breitner, 1898", reviews: "4"}) {
+    product1: insert_products_one(object: {name: "George Hendrik Breitner",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/tue9jbk3tnfrrpbnbhpl.webp", reviews: "4", description: "The Singel Bridge at the Paleisstraat in Amsterdam"}) {
     id
     }
-    product2: insert_products_one(object: {name: "Winter Landscape with Ice Skaters",  price: 19.99, image: "https://lh3.googleusercontent.com/1pTfYJlLwVTifKj4PlsWPyAg4PcIVBAiVvB8sameSnmm7HRd056abNUIRq33rgry7u9t-ju-eHOnbfqQpK4q_8IwzIXZ4WgrqZW9l7U=s0", description: "Winter Landscape with Ice Skaters, Hendrick Avercamp, c. 1608", reviews: "4"}) {
+    product2: insert_products_one(object: {name: "Hendrick Avercamp",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/o27yiv0bwmmyipha9yhq.webp", reviews: "4", description: "Winter Landscape with Ice Skaters"}) {
     id
     }
-    product3: insert_products_one(object: {name: "The Threatened Swan",  price: 19.99, image: "https://lh3.googleusercontent.com/tm1DbZrAP0uBM-OJhLwvKir1Le5LglRF_bvbaNi6m-F_pIyttsWQz040soRY9pWA9PgNEYFA_fBkg_keYixRXCAjz9Q=s0", description: "The Threatened Swan, Jan Asselijn, c. 1650", reviews: "4"}) {
+    product3: insert_products_one(object: {name: "Jan Asselijn",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/bl1rmzaisc0qg1dvwzyr.webp", reviews: "4", description: "The Threatened Swan"}) {
     id
     }
-    product4: insert_products_one(object: {name: "Girl in a White Kimono",  price: 19.99, image: "https://lh3.googleusercontent.com/0bgOiMrBM2GuhW_pNeQW711GuB3kD7Gq7AILGHaJGeWKa1Fu1hUJGpOjvSpiP_XpgRlC4jVmH0Z1233PEPMJTfNRR7Q=s0", description: "Girl in a White Kimono, George Hendrik Breitner, 1894", reviews: "4"}) {
+    product4: insert_products_one(object: {name: "George Hendrik Breitner",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/acnzqgrqy8fw5ezup2mp.webp", reviews: "4", description: "Girl in a White Kimono"}) {
     id
     }
-    product5: insert_products_one(object: {name: "Gallant Conversation, Known as ‘The Paternal Admonition’",  price: 19.99, image: "https://lh3.googleusercontent.com/FNNTrTASiUR0f49UVUY5bisIM-3RlAbf_AmktgnU_4ou1ZG0juh3pMT1-xpQmtN1R8At4Gq9B4ioSSi4TVrgbCZsmtY=s0", description: "Gallant Conversation, Known as ‘The Paternal Admonition’, Gerard ter Borch (II), c. 1654", reviews: "4"}) {
+    product5: insert_products_one(object: {name: "Gerard ter Borch (II)",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/rjt33sfhbxf28lausn4a.webp", reviews: "4", description: "Gallant Conversation, Known as ‘The Paternal Admonition’"}) {
     id
     }
-    product6: insert_products_one(object: {name: "The Battle of Terheide",  price: 19.99, image: "https://lh5.ggpht.com/NNwpBd1GteTy1QVYsJH64dJh_eb8pORRD5AtB2tfrYRvvFlM5-07MakQOYmYo3h6-09spXyHfJZbjv6ODhPJiStHjQ=s0", description: "The Battle of Terheide, Willem van de Velde (I), 1657", reviews: "4"}) {
+    product6: insert_products_one(object: {name: "Willem van de Velde (I)",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/bmppkqjkkphyqqvqi5hy.webp", reviews: "4", description: "The Battle of Terheide"}) {
     id
     }
-    product7: insert_products_one(object: {name: "Portrait of a Girl Dressed in Blue",  price: 19.99, image: "https://lh3.googleusercontent.com/XOEEpiJxvnbvetJvG7wbpPL9trO3nAAJuPztTOFxS2jtpHgqIkRGFfFJgkkS00bLCs6Ezkg0qRMOMZUMnBP3mbmQ-rJh_gFiffSIhyWX=s0", description: "Portrait of a Girl Dressed in Blue, Johannes Cornelisz. Verspronck, 1641", reviews: "4"}) {
+    product7: insert_products_one(object: {name: "Johannes Cornelisz. Verspronck",  price: 19.99, image: "undefined", reviews: "4", description: "Portrait of a Girl Dressed in Blue"}) {
     id
     }
-    product8: insert_products_one(object: {name: "View of Houses in Delft, Known as ‘The Little Street’",  price: 19.99, image: "https://lh3.googleusercontent.com/N-coqwrkCI2zYd6nTtGEpLPwB4nOKJVxcXmCCKg0WrcEp4gDj44NdWZy_DoI5yPrWzTX7qZQrc9I1UlB-zBdMNrZWLYh4A1FtX1eimZ5=s0", description: "View of Houses in Delft, Known as ‘The Little Street’, Johannes Vermeer, c. 1658", reviews: "4"}) {
+    product8: insert_products_one(object: {name: "Johannes Vermeer",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996045/art-store/esxsgufq2tzoajn7ie7z.webp", reviews: "4", description: "View of Houses in Delft, Known as ‘The Little Street’"}) {
     id
     }
-    product9: insert_products_one(object: {name: "Italian Landscape with a Draughtsman",  price: 19.99, image: "https://lh3.googleusercontent.com/KA2hIo0BlMDmyQDEC3ixvp9WHgcyJnlAvWtVcZmExh9ocPoZdQGRJh7bZjE2Mx2OGC0Zi3QGHGP0LlmuFgRlIYs36Sgn5G2OD-0MaTo=s0", description: "Italian Landscape with a Draughtsman, Jan Both, c. 1650 - 1652", reviews: "4"}) {
+    product9: insert_products_one(object: {name: "Jan Both",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/wpqusx6rkmetpkp242fg.webp", reviews: "4", description: "Italian Landscape with a Draughtsman"}) {
     id
     }
-    product10: insert_products_one(object: {name: "The Milkmaid",  price: 19.99, image: "https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=s0", description: "The Milkmaid, Johannes Vermeer, c. 1660", reviews: "4"}) {
+    product10: insert_products_one(object: {name: "Johannes Vermeer",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/hegvfqa3xv9xxcl7tmr0.webp", reviews: "4", description: "The Milkmaid"}) {
     id
     }
-    product11: insert_products_one(object: {name: "Floral Still Life",  price: 19.99, image: "https://lh3.googleusercontent.com/nAGClUPzsX6AlHMMhWo0Wa3vEN7OlG6T4TmdlsHzeZigky3Gv6_TLhF4GakOfGYtW_GCHBQOwc92hpmaS_MrtK4FTeRYOnpib05HnvQENA=s0", description: "Floral Still Life, Hans Bollongier, 1639", reviews: "4"}) {
+    product11: insert_products_one(object: {name: "Hans Bollongier",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/zq4vybdebpttlvp8hjbb.webp", reviews: "4", description: "Floral Still Life"}) {
     id
     }
-    product12: insert_products_one(object: {name: "Woman Reading a Letter",  price: 19.99, image: "https://lh3.googleusercontent.com/cgJpNZ47yAU-Ttf6SF4vdBBxAiiZW_w_-DsA1Xchet3eDJN-8EyoA24xgNR9Wl1fTLwGAhENkTkMZu1qULcXOQdgF2K1qDbdWSwic1POVg=s0", description: "Woman Reading a Letter, Johannes Vermeer, c. 1663", reviews: "4"}) {
+    product12: insert_products_one(object: {name: "Johannes Vermeer",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/v02jb4stczkhdacrfrq2.webp", reviews: "4", description: "Woman Reading a Letter"}) {
     id
     }
-    product13: insert_products_one(object: {name: "The Merry Family",  price: 19.99, image: "https://lh3.googleusercontent.com/7JF0tll1eAfY8XgFHJ6Iq_e1xux4xgcT8_LxMfVbZdRMC5CX5KsXLH1DLlMEfuTfKX8kehtmhJyzJSBFEBDPFmeB6Y8=s0", description: "The Merry Family, Jan Havicksz. Steen, 1668", reviews: "4"}) {
+    product13: insert_products_one(object: {name: "Jan Havicksz. Steen",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996045/art-store/fuwsbfbhc9jt3owaok2m.webp", reviews: "4", description: "The Merry Family"}) {
     id
     }
-    product14: insert_products_one(object: {name: "A Mother Delousing her Child’s Hair, Known as ‘A Mother’s Duty’",  price: 19.99, image: "https://lh3.googleusercontent.com/6Vm9nYrTeeYe5wl7lOafEHUnbzNF8KJw3ZbV_cNBr_wQTyHyp1DJxEWEEK3OSuji9XGYx04r15HTVPu850WeFcOd0ZVv=s0", description: "A Mother Delousing her Child’s Hair, Known as ‘A Mother’s Duty’, Pieter de Hooch, c. 1660 - c. 1661", reviews: "4"}) {
+    product14: insert_products_one(object: {name: "Pieter de Hooch",  price: 19.99, image: "undefined", reviews: "4", description: "A Mother Delousing her Child’s Hair, Known as ‘A Mother’s Duty’"}) {
     id
     }
-    product15: insert_products_one(object: {name: "The Sampling Officials of the Amsterdam Drapers’ Guild, Known as ‘The Syndics’",  price: 19.99, image: "https://lh3.googleusercontent.com/gShVRyvLLbwVB8jeIPghCXgr96wxTHaM4zqfmxIWRsUpMhMn38PwuUU13o1mXQzLMt5HFqX761u8Tgo4L_JG1XLATvw=s0", description: "The Sampling Officials of the Amsterdam Drapers’ Guild, Known as ‘The Syndics’, Rembrandt van Rijn, 1662", reviews: "4"}) {
+    product15: insert_products_one(object: {name: "Rembrandt van Rijn",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/jt3yyj8zbu63qdyheih6.webp", reviews: "4", description: "The Sampling Officials of the Amsterdam Drapers’ Guild, Known as ‘The Syndics’"}) {
     id
     }
-    product16: insert_products_one(object: {name: "A Pelican and other Birds near a Pool, Known as ‘The Floating Feather’",  price: 19.99, image: "https://lh3.googleusercontent.com/3UIOtn2DLhEC4W92V0_pIdChloiYyzpXvehK0BYaM3NHJR5zWhcA7uXlcNX_mCAt9xBh3gaHo3pDuriYzYm3uEDbeUEr=s0", description: "A Pelican and other Birds near a Pool, Known as ‘The Floating Feather’, Melchior d'Hondecoeter, c. 1680", reviews: "4"}) {
+    product16: insert_products_one(object: {name: "Melchior d'Hondecoeter",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/fz0n6lyvdzfh7mul64vg.webp", reviews: "4", description: "A Pelican and other Birds near a Pool, Known as ‘The Floating Feather’"}) {
     id
     }
-    product17: insert_products_one(object: {name: "Self-portrait",  price: 19.99, image: "https://lh3.googleusercontent.com/7qzT0pbclLB7y3fdS1GxzMnV7m3gD3gWnhlquhFaJSn6gNOvMmTUAX3wVlTzhMXIs8kM9IH8AsjHNVTs8em3XQI6uMY=s0", description: "Self-portrait, Rembrandt van Rijn, c. 1628", reviews: "4"}) {
+    product17: insert_products_one(object: {name: "Rembrandt van Rijn",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/kv7sqxrkklgklavlktti.webp", reviews: "4", description: "Self-portrait"}) {
     id
     }
-    product18: insert_products_one(object: {name: "The Sick Child",  price: 19.99, image: "https://lh3.googleusercontent.com/SCp0xV3Rwxh3ipnuSnbEQR_uGrHlsvHXlLD-5kVSjAE7WPWiribDB77_LcJETu4EydCC_jMuhsgjz4maHzY_t-xeiw=s0", description: "The Sick Child, Gabriël Metsu, c. 1664 - c. 1666", reviews: "4"}) {
+    product18: insert_products_one(object: {name: "Gabriël Metsu",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/t6t85qpkwwkaglw4uxrf.webp", reviews: "4", description: "The Sick Child"}) {
     id
     }
-    product19: insert_products_one(object: {name: "Portrait of a Member of the Van der Mersch Family",  price: 19.99, image: "https://lh5.ggpht.com/5cC5A43gL66dAluLm3_Mp0NiZ7v6BZxwnD--37cz3fvjV087nF1NvkOjnlWs5KqnvgVtd1pcR-JcqkTCk8YKhWr_W3j8=s0", description: "Portrait of a Member of the Van der Mersch Family, Cornelis Troost, 1736", reviews: "4"}) {
+    product19: insert_products_one(object: {name: "Cornelis Troost",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/myrpcswwkhfcr2spyz4k.webp", reviews: "4", description: "Portrait of a Member of the Van der Mersch Family"}) {
     id
     }
-    product20: insert_products_one(object: {name: "Still Life with Cheese",  price: 19.99, image: "https://lh3.googleusercontent.com/O6IfrxhVOGXdcw9-nOkenQqx3svNJtgJFjF_tON1HG_ASu1Uy6IAwOzH7MIOJ3jVBnAZhqyTlw0N1CIILKjtuv0aLLGwvZH3XbSD9pk4=s0", description: "Still Life with Cheese, Floris Claesz van Dijck, c. 1615", reviews: "4"}) {
+    product20: insert_products_one(object: {name: "Floris Claesz van Dijck",  price: 19.99, image: "https://res.cloudinary.com/dgcfd6vjx/image/upload/v1714996044/art-store/cplctunmo3xeqrameq7u.webp", reviews: "4", description: "Still Life with Cheese"}) {
     id
     }
     }
